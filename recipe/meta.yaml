@@ -32,10 +32,11 @@ test:
 
 about:
   home: https://github.com/kennethreitz/clint
-  license: ISC License (ISCL)
+  license: ISC
   summary: 'Python Command Line Interface Tools'
 
 extra:
   recipe-maintainers:
     - ericdill
     - janschulz
+    - SylvainCorlay
