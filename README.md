@@ -3,7 +3,7 @@ About clint
 
 Home: https://github.com/kennethreitz/clint
 
-Package license: ISC License (ISCL)
+Package license: ISC
 
 Feedstock license: BSD 3-Clause
 
