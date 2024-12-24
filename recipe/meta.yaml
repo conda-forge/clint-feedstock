@@ -6,26 +6,28 @@ package:
 
 source:
   fn: clint-{{ version }}.tar.gz
-  url: https://pypi.io/packages/source/c/clint/clint-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/c/clint/clint-{{ version }}.tar.gz
   md5: 8afd569f077886e2f4e6cca377da2623
 
 build:
   noarch: python
-  number: 1
-  script: python -m pip install --no-deps --ignore-installed .
+  number: 2
+  script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
   host:
     - pip
-    - python
+    - python {{ python_min }}
     - setuptools
     - args
 
   run:
-    - python
+    - python >={{ python_min }}
     - args
 
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - clint
     - clint.packages
